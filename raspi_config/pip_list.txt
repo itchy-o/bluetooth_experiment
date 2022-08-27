@@ -47,7 +47,6 @@ oauthlib          3.1.0
 olefile           0.46
 pantilthat        0.0.7
 parso             0.8.1
-pexpect           4.8.0
 pgzero            1.2
 phatbeat          0.1.1
 pianohat          0.1.0
@@ -70,7 +69,6 @@ pyserial          3.5b0
 pysmbc            1.0.23
 python-apt        2.2.1
 rainbowhat        0.1.0
-reportlab         3.5.59
 requests          2.25.1
 requests-oauthlib 1.0.0
 responses         0.12.1
