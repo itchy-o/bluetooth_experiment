@@ -39,13 +39,11 @@ ii  build-essential                      12.9                             armhf 
 ii  busybox                              1:1.30.1-6                       armhf        Tiny utilities for small and embedded systems
 ii  bzip2                                1.0.8-4                          armhf        high-quality block-sorting file compressor - utilities
 ii  ca-certificates                      20210119                         all          Common CA certificates
-ii  chromium-browser                     101.0.4951.57-rpt2               armhf        Chromium web browser, open-source version of Chrome
-ii  chromium-browser-l10n                101.0.4951.57-rpt2               all          chromium-browser language packages
-ii  chromium-codecs-ffmpeg-extra         101.0.4951.57-rpt2               armhf        Extra ffmpeg codecs for the Chromium Browser
+rc  chromium-browser                     101.0.4951.57-rpt2               armhf        Chromium web browser, open-source version of Chrome
 ii  cifs-utils                           2:6.11-3.1+deb11u1               armhf        Common Internet File System utilities
 ii  cmake                                3.18.4-2+rpt1+rpi1+deb11u1       armhf        cross-platform, open-source make system
 ii  cmake-data                           3.18.4-2+rpt1+rpi1+deb11u1       all          CMake data files (modules, templates and documentation)
-ii  colord                               1.4.5-3                          armhf        system service to manage device colour profiles -- system daemon
+rc  colord                               1.4.5-3                          armhf        system service to manage device colour profiles -- system daemon
 ii  colord-data                          1.4.5-3                          all          system service to manage device colour profiles -- data files
 ii  console-setup                        1.205                            all          console font and keymap setup program
 ii  console-setup-linux                  1.205                            all          Linux specific part of console-setup
@@ -55,18 +53,12 @@ ii  cpp                                  4:10.2.1-1+rpi1                  armhf 
 ii  cpp-10                               10.2.1-6+rpi1                    armhf        GNU C preprocessor
 ii  crda                                 4.14+git20191112.9856751-1       armhf        wireless Central Regulatory Domain Agent
 ii  cron                                 3.0pl1-137                       armhf        process scheduling daemon
-ii  cups                                 2.3.3op2-3+deb11u2               armhf        Common UNIX Printing System(tm) - PPD/driver support, web interface
-ii  cups-browsed                         1.28.7-1+deb11u1                 armhf        OpenPrinting CUPS Filters - cups-browsed
-ii  cups-client                          2.3.3op2-3+deb11u2               armhf        Common UNIX Printing System(tm) - client programs (SysV)
-ii  cups-common                          2.3.3op2-3+deb11u2               all          Common UNIX Printing System(tm) - common files
-ii  cups-core-drivers                    2.3.3op2-3+deb11u2               armhf        Common UNIX Printing System(tm) - driverless printing
-ii  cups-daemon                          2.3.3op2-3+deb11u2               armhf        Common UNIX Printing System(tm) - daemon
-ii  cups-filters                         1.28.7-1+deb11u1                 armhf        OpenPrinting CUPS Filters - Main Package
-ii  cups-filters-core-drivers            1.28.7-1+deb11u1                 armhf        OpenPrinting CUPS Filters - Driverless printing
-ii  cups-ipp-utils                       2.3.3op2-3+deb11u2               armhf        Common UNIX Printing System(tm) - IPP developer/admin utilities
-ii  cups-pk-helper                       0.2.6-1+rpt1                     armhf        PolicyKit helper to configure cups with fine-grained privileges
-ii  cups-ppdc                            2.3.3op2-3+deb11u2               armhf        Common UNIX Printing System(tm) - PPD manipulation utilities
-ii  cups-server-common                   2.3.3op2-3+deb11u2               all          Common UNIX Printing System(tm) - server common files
+rc  cups                                 2.3.3op2-3+deb11u2               armhf        Common UNIX Printing System(tm) - PPD/driver support, web interface
+rc  cups-browsed                         1.28.7-1+deb11u1                 armhf        OpenPrinting CUPS Filters - cups-browsed
+rc  cups-core-drivers                    2.3.3op2-3+deb11u2               armhf        Common UNIX Printing System(tm) - driverless printing
+rc  cups-daemon                          2.3.3op2-3+deb11u2               armhf        Common UNIX Printing System(tm) - daemon
+rc  cups-filters                         1.28.7-1+deb11u1                 armhf        OpenPrinting CUPS Filters - Main Package
+rc  cups-pk-helper                       0.2.6-1+rpt1                     armhf        PolicyKit helper to configure cups with fine-grained privileges
 ii  curl                                 7.74.0-1.3+deb11u2               armhf        command line tool for transferring data with URL syntax
 ii  dash                                 0.5.11+git20200708+dd9ef66-5     armhf        POSIX-compliant shell
 ii  dbus                                 1.12.20-2                        armhf        simple interprocess messaging system (daemon and utilities)
@@ -145,8 +137,7 @@ ii  gcc-9-base:armhf                     9.3.0-22+rpi1                    armhf 
 ii  gcr                                  3.38.1-2                         armhf        GNOME crypto services (daemon and tools)
 ii  gdb                                  10.1-1.7                         armhf        GNU Debugger
 ii  gdisk                                1.0.6-1.1                        armhf        GPT fdisk text-mode partitioning tool
-ii  geany                                1.37.1-2+rpt1                    armhf        fast and lightweight IDE
-ii  geany-common                         1.37.1-2+rpt1                    all          fast and lightweight IDE -- common files
+rc  geany-common                         1.37.1-2+rpt1                    all          fast and lightweight IDE -- common files
 ii  gettext-base                         0.21-4                           armhf        GNU Internationalization utilities for the base system
 ii  ghostscript                          9.53.3~dfsg-7+deb11u2            armhf        interpreter for the PostScript language and for PDF
 ii  giblib1:armhf                        1.2.4-13                         armhf        wrapper library for imlib2, and other stuff
@@ -219,7 +210,7 @@ ii  hardlink                             0.3.2+b1                         armhf 
 ii  hashdeep                             4.4-7                            armhf        recursively compute hashsums or piecewise hashings
 ii  hicolor-icon-theme                   0.17-2                           all          default fallback theme for FreeDesktop.org icon themes
 ii  hostname                             3.23                             armhf        utility to set/show the host name or domain name
-ii  hplip                                3.21.2+dfsg1-2+b1                armhf        HP Linux Printing and Imaging System (HPLIP)
+rc  hplip                                3.21.2+dfsg1-2+b1                armhf        HP Linux Printing and Imaging System (HPLIP)
 ii  hplip-data                           3.21.2+dfsg1-2                   all          HP Linux Printing and Imaging - data files
 ii  htop                                 3.0.5-7                          armhf        interactive processes viewer
 ii  hunspell-en-gb                       1:7.1.0~rc3-3                    all          English (GB) dictionary for hunspell
@@ -378,8 +369,6 @@ ii  libdebconfclient0:armhf              0.260                            armhf 
 ii  libdebuginfod1:armhf                 0.183-1                          armhf        library to interact with debuginfod (development files)
 ii  libdeflate0:armhf                    1.7-1                            armhf        fast, whole-buffer DEFLATE-based compression and decompression
 ii  libdevmapper1.02.1:armhf             2:1.02.175-2.1                   armhf        Linux Kernel Device Mapper userspace library
-ii  libdjvulibre-text                    3.5.28-2                         all          Linguistic support files for libdjvulibre
-ii  libdjvulibre21:armhf                 3.5.28-2                         armhf        Runtime support for the DjVu image format
 ii  libdns-export1110                    1:9.11.19+dfsg-2.1               armhf        Exported DNS Shared Library
 ii  libdouble-conversion3:armhf          3.1.5-6.1                        armhf        routines to convert IEEE floats to and from strings
 ii  libdpkg-perl                         1.20.11+rpi1                     all          Dpkg perl modules
@@ -585,11 +574,6 @@ ii  libllvm11:armhf                      1:11.0.1-2+rpi1                  armhf 
 ii  liblmdb0:armhf                       0.9.24-1                         armhf        Lightning Memory-Mapped Database shared library
 ii  liblocale-gettext-perl               1.07-4+b1                        armhf        module using libc functions for internationalization in Perl
 ii  liblognorm5:armhf                    2.0.5-1.1                        armhf        log normalizing library
-ii  liblouis-data                        3.16.0-1                         all          Braille translation library - data
-ii  liblouis20:armhf                     3.16.0-1                         armhf        Braille translation library - shared libs
-ii  liblouisutdml-bin                    2.9.0-1                          armhf        Braille UTDML translation utilities
-ii  liblouisutdml-data                   2.9.0-1                          all          Braille UTDML translation library - data
-ii  liblouisutdml9:armhf                 2.9.0-1                          armhf        Braille UTDML translation library - shared libs
 ii  libltc11:armhf                       1.3.1-1                          armhf        linear timecode library
 ii  libltdl7:armhf                       2.4.6-15                         armhf        System independent dlopen wrapper for GNU libtool
 ii  liblua5.2-0:armhf                    5.2.4-1.1+b2                     armhf        Shared library for the Lua interpreter version 5.2
@@ -782,9 +766,8 @@ ii  librtimulib7                         7.2.1-6                          armhf 
 ii  librtmp1:armhf                       2.4+20151223.gitfa8646d.1-2+b2   armhf        toolkit for RTMP streams (shared library)
 ii  librubberband2:armhf                 1.9.0-1                          armhf        audio time-stretching and pitch-shifting library
 ii  libsamplerate0:armhf                 0.2.1+ds0-1                      armhf        Audio sample rate conversion library
-ii  libsane-common                       1.0.31-4.1                       all          API library for scanners -- documentation and support files
-ii  libsane-hpaio:armhf                  3.21.2+dfsg1-2+b1                armhf        HP SANE backend for multi-function peripherals
-ii  libsane1:armhf                       1.0.31-4.1                       armhf        API library for scanners
+rc  libsane-common                       1.0.31-4.1                       all          API library for scanners -- documentation and support files
+rc  libsane-hpaio:armhf                  3.21.2+dfsg1-2+b1                armhf        HP SANE backend for multi-function peripherals
 ii  libsasl2-2:armhf                     2.1.27+dfsg-2.1+deb11u1          armhf        Cyrus SASL - authentication abstraction library
 ii  libsasl2-modules-db:armhf            2.1.27+dfsg-2.1+deb11u1          armhf        Cyrus SASL - pluggable authentication modules (DB)
 ii  libsbc1:armhf                        1.5-3                            armhf        Sub Band CODEC library - runtime
@@ -1058,7 +1041,7 @@ ii  mesa-vdpau-drivers:armhf             20.3.5-1+rpt4+rpi1               armhf 
 ii  mime-support                         3.66                             all          transitional package
 ii  mksh                                 59c-9                            armhf        MirBSD Korn Shell
 ii  mkvtoolnix                           54.0.0+really52.0.0-3            armhf        Set of command-line tools to work with Matroska files
-ii  modemmanager                         1.14.12-0.2                      armhf        D-Bus service for managing modems
+rc  modemmanager                         1.14.12-0.2                      armhf        D-Bus service for managing modems
 ii  moreutils                            0.65-1                           armhf        additional Unix utilities
 ii  mount                                2.36.1-8+deb11u1                 armhf        tools for mounting and manipulating filesystems
 ii  mousepad                             0.5.2-1                          armhf        simple Xfce oriented text editor
@@ -1130,9 +1113,6 @@ ii  policykit-1                          0.105-31+rpt1+deb11u1            armhf 
 ii  poppler-data                         0.4.10-1                         all          encoding data for the poppler PDF rendering library
 ii  poppler-utils                        20.09.0-3.1                      armhf        PDF utilities (based on Poppler)
 ii  pprompt                              0.19                             all          ssh password check
-ii  printer-driver-escpr                 1.7.8-1                          armhf        printer driver for Epson Inkjet that use ESC/P-R
-ii  printer-driver-hpcups                3.21.2+dfsg1-2+b1                armhf        HP Linux Printing and Imaging - CUPS Raster driver (hpcups)
-ii  printer-driver-postscript-hp         3.21.2+dfsg1-2+b1                armhf        HP Printers PostScript Descriptions
 ii  procps                               2:3.3.17-5                       armhf        /proc file system utilities
 ii  psmisc                               23.4-2                           armhf        utilities that use the proc file system
 ii  publicsuffix                         20211207.1025-0+deb11u1          all          accurate, machine-readable list of domain name suffixes
@@ -1269,7 +1249,6 @@ ii  qml-module-qtquick-templates2:armhf  5.15.2+dfsg-2                    armhf 
 ii  qml-module-qtquick-window2:armhf     5.15.2+dfsg-6+rpi1               armhf        Qt 5 window 2 QML module
 ii  qml-module-qtquick2:armhf            5.15.2+dfsg-6+rpi1               armhf        Qt 5 Qt Quick 2 QML module
 ii  qpdfview                             0.4.18-5+rpt3                    armhf        tabbed document viewer
-ii  qpdfview-djvu-plugin                 0.4.18-5+rpt3                    armhf        tabbed document viewer - DjVu plugin
 ii  qpdfview-pdf-poppler-plugin          0.4.18-5+rpt3                    armhf        tabbed document viewer - DjVu plugin
 ii  qpdfview-ps-plugin                   0.4.18-5+rpt3                    armhf        tabbed document viewer - PostScript plugin
 ii  qpdfview-translations                0.4.18-5+rpt3                    all          tabbed document viewer - translations
@@ -1304,7 +1283,7 @@ ii  rp-prefapps                          0.41                             armhf 
 ii  rpcbind                              1.2.5-9+b1                       armhf        converts RPC program numbers into universal addresses
 ii  rpd-plym-splash                      0.31                             armhf        Raspberry Pi Desktop splashscreen
 ii  rpd-wallpaper                        0.4                              all          Wallpaper for Raspberry Pi Desktop
-ii  rpi-chromium-mods                    20220711                         armhf        Raspberry Pi-specific mods to Chromium
+rc  rpi-chromium-mods                    20220711                         armhf        Raspberry Pi-specific mods to Chromium
 ii  rpi-eeprom                           13.16-1                          armhf        Raspberry Pi 4 boot EEPROM updater
 ii  rpi-imager                           1.7.2                            armhf        Raspberry Pi imaging utility
 ii  rpi-update                           20210618                         all          Raspberry Pi firmware updating tool
@@ -1315,7 +1294,7 @@ ii  rsyslog                              8.2102.0-2+deb11u1               armhf 
 ii  rtkit                                0.13-4                           armhf        Realtime Policy and Watchdog Daemon
 ii  runit-helper                         2.10.3                           all          dh-runit implementation detail
 ii  samba-libs:armhf                     2:4.13.13+dfsg-1~deb11u4         armhf        Samba core libraries
-ii  sane-utils                           1.0.31-4.1                       armhf        API library for scanners -- utilities
+rc  sane-utils                           1.0.31-4.1                       armhf        API library for scanners -- utilities
 ii  screen                               4.8.0-6                          armhf        terminal multiplexer with VT100/ANSI terminal emulation
 ii  scrot                                1.5-1                            armhf        command line screen capture utility
 ii  sed                                  4.7-1                            armhf        GNU stream editor for filtering/transforming text
@@ -1368,22 +1347,9 @@ ii  vdpau-driver-all:armhf               1.4-3                            armhf 
 ii  vim                                  2:8.2.2434-3+deb11u1             armhf        Vi IMproved - enhanced vi editor
 ii  vim-common                           2:8.2.2434-3+deb11u1             all          Vi IMproved - Common files
 ii  vim-runtime                          2:8.2.2434-3+deb11u1             all          Vi IMproved - Runtime files
-ii  vim-tiny                             2:8.2.2434-3+deb11u1             armhf        Vi IMproved - enhanced vi editor - compact version
-ii  vlc                                  3.0.17.4-0+deb11u1+rpi1+rpt3     armhf        multimedia player and streamer
-ii  vlc-bin                              3.0.17.4-0+deb11u1+rpi1+rpt3     armhf        binaries from VLC
-ii  vlc-data                             3.0.17.4-0+deb11u1+rpi1+rpt3     all          common data for VLC
-ii  vlc-l10n                             3.0.17.4-0+deb11u1+rpi1+rpt3     all          translations for VLC
-ii  vlc-plugin-access-extra:armhf        3.0.17.4-0+deb11u1+rpi1+rpt3     armhf        multimedia player and streamer (extra access plugins)
-ii  vlc-plugin-base:armhf                3.0.17.4-0+deb11u1+rpi1+rpt3     armhf        multimedia player and streamer (base plugins)
-ii  vlc-plugin-notify:armhf              3.0.17.4-0+deb11u1+rpi1+rpt3     armhf        LibNotify plugin for VLC
-ii  vlc-plugin-qt:armhf                  3.0.17.4-0+deb11u1+rpi1+rpt3     armhf        multimedia player and streamer (Qt plugin)
-ii  vlc-plugin-samba:armhf               3.0.17.4-0+deb11u1+rpi1+rpt3     armhf        Samba plugin for VLC
-ii  vlc-plugin-skins2:armhf              3.0.17.4-0+deb11u1+rpi1+rpt3     armhf        multimedia player and streamer (Skins2 plugin)
-ii  vlc-plugin-video-output:armhf        3.0.17.4-0+deb11u1+rpi1+rpt3     armhf        multimedia player and streamer (video output plugins)
-ii  vlc-plugin-video-splitter:armhf      3.0.17.4-0+deb11u1+rpi1+rpt3     armhf        multimedia player and streamer (video splitter plugins)
-ii  vlc-plugin-visualization:armhf       3.0.17.4-0+deb11u1+rpi1+rpt3     armhf        multimedia player and streamer (visualization plugins)
-ii  wamerican                            2019.10.06-1                     all          American English dictionary words for /usr/share/dict
-ii  wbritish                             2019.10.06-1                     all          British English dictionary words for /usr/share/dict
+rc  vim-tiny                             2:8.2.2434-3+deb11u1             armhf        Vi IMproved - enhanced vi editor - compact version
+rc  wamerican                            2019.10.06-1                     all          American English dictionary words for /usr/share/dict
+rc  wbritish                             2019.10.06-1                     all          British English dictionary words for /usr/share/dict
 ii  wget                                 1.21-1+deb11u1                   armhf        retrieves files from the web
 ii  whiptail                             0.52.21-4+b2                     armhf        Displays user-friendly dialog boxes from shell scripts
 ii  whois                                5.5.10                           armhf        intelligent WHOIS client
