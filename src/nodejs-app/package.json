@@ -1,0 +1,16 @@
+{
+  "name": "nodejs-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Bishop Zareh (http://bishopz.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "noble": "1.9.1",
+    "node-beacon-scanner": "0.2.2"
+  }
+}
