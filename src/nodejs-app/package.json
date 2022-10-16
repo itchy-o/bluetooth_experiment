@@ -10,7 +10,7 @@
   "author": "Bishop Zareh (http://bishopz.com/)",
   "license": "ISC",
   "dependencies": {
-    "noble": "1.9.1",
+    "@abandonware/noble": "1.9.2-15",
     "node-beacon-scanner": "0.2.2"
   }
 }
