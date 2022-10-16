@@ -1,21 +1,25 @@
 // Read the battery level of the first found peripheral exposing the Battery Level characteristic
 
-const noble = require('@abandonware/noble')({extended: false});
+const noble = require('@abandonware/noble')
 
-noble.on('stateChange', async (state) => {
-  if (state === 'poweredOn') {
-    await noble.startScanningAsync(['180f'], false);
-  }
-});
+console.log(noble)
 
-noble.on('discover', async (peripheral) => {
-  await noble.stopScanningAsync();
-  await peripheral.connectAsync();
-  const {characteristics} = await peripheral.discoverSomeServicesAndCharacteristicsAsync(['180f'], ['2a19']);
-  const batteryLevel = (await characteristics[0].readAsync())[0];
+// const noble = require('@abandonware/noble')({ extended: false });
 
-  console.log(`${peripheral.address} (${peripheral.advertisement.localName}): ${batteryLevel}%`);
+// noble.on('stateChange', async (state) => {
+//   if (state === 'poweredOn') {
+//     await noble.startScanningAsync(['180f'], false);
+//   }
+// });
 
-  await peripheral.disconnectAsync();
-  process.exit(0);
-});
+// noble.on('discover', async (peripheral) => {
+//   await noble.stopScanningAsync();
+//   await peripheral.connectAsync();
+//   const { characteristics } = await peripheral.discoverSomeServicesAndCharacteristicsAsync(['180f'], ['2a19']);
+//   const batteryLevel = (await characteristics[0].readAsync())[0];
+
+//   console.log(`${peripheral.address} (${peripheral.advertisement.localName}): ${batteryLevel}%`);
+
+//   await peripheral.disconnectAsync();
+//   process.exit(0);
+// });
