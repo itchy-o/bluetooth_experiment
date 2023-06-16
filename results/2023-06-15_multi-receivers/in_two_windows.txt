@@ -1,0 +1,9 @@
+
+
+script --flush --command ./log.sh "./btmon_$(hostname -s)_$(date -Iseconds).txt"
+
+
+sudo hcitool lescan --duplicates
+
+
+
