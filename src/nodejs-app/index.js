@@ -1,17 +1,24 @@
+const noble = require('@abandonware/noble');
 
-const Noble = require("noble");
-const BeaconScanner = require("node-beacon-scanner");
+noble.on('stateChange', async (state) => {
+  console.log(state)
+  if (state === 'poweredOn') {
+    await noble.startScanningAsync([], true);
+  }
+});
 
-var scanner = new BeaconScanner();
+const toTimeString = (date) => {
+  return date.getHours()
+  + ':'
+  + date.getMinutes().toString().padStart(2, "0")
+  + ':'
+  + date.getSeconds().toString().padStart(2, "0");
+}
 
-scanner.onadvertisement = advertisement => {
-  var beacon = advertisement["iBeacon"];
-  beacon.rssi = advertisement["rssi"];
-  console.log(JSON.stringify(beacon, null, "    "))
-};
-
-scanner.startScan().then(() => {
-    console.log("Scanning for BLE devices...")  ;
-}).catch((error) => {
-    console.error(error);
+noble.on('discover', async (peripheral) => {
+  console.log(
+    peripheral.uuid,
+    peripheral.rssi,
+    toTimeString(new Date())
+  )
 });
