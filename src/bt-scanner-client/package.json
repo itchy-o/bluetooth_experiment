@@ -1,0 +1,14 @@
+{
+  "name": "bt-scanner-client",
+  "version": "0.0.1",
+  "description": "scans for bluetooth and reports it's findings.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Bishop Zareh (http://bishopz.com/)",
+  "license": "All rights reserved, Itchy-o LLC",
+  "dependencies": {
+    "@abandonware/noble": "1.9.2-21"
+  }
+}

@@ -12,13 +12,14 @@ const toTimeString = (date) => {
   + ':'
   + date.getMinutes().toString().padStart(2, "0")
   + ':'
-  + date.getSeconds().toString().padStart(2, "0");
+  + date.getSeconds().toString().padStart(2, "0")
+  + ':'
+  + date.getMilliseconds().toString().padStart(3, "0");
 }
 
 noble.on('discover', async (peripheral) => {
+  // console.log(peripheral.advertisement)
   console.log(
-    peripheral.uuid,
-    peripheral.rssi,
-    toTimeString(new Date())
+    `${peripheral.uuid},${peripheral.rssi},${toTimeString(new Date())}`
   )
 });
