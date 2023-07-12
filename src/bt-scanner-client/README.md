@@ -1,14 +1,19 @@
 
 # Next steps
 
-+ Get scanner client working on a pi
-+ Divide into client & server projects.
-+ Filter data to known devices, before it goes over the pipe. Use peripheral.address instead of uuid.
 + Use ENV to create a scanner ID.
++ Divide into client & server projects.
 + Use socket.io to send data.
 + Build basic application framework & admin UI for the server.
 + Some mechanism to accept and que sensor data.
 + Start doing the translateralization math.
+
+
+# Device filtering
+
+On Mac, the BT address is masked. Both Linux and Mac also generate a unique id for each device. Those ids are the same each time the device is detected, but each OS has a different way of calculating that id. So, we need both ids if we want to filter the scanner output to specific devices.
+
+Currently this repo is setup to look for Bishop's iPhone.
 
 
 # Install on Raspian (incomplete)
@@ -28,7 +33,8 @@
 7. Change to the bt-client folder and install dependencies.
    1. `cd bluetooth_experiment/src/bt-scanner-client`
    2. `npm install`
-8. Run `npm start` to start the scanner. Or run `npm start > output.csv` to put the results to a file.
+7. In the bt-scanner-client folder create a file called `.env` and copy the contents of the `.env-sample` file.
+8. Run `npm start` to start the scanner. Or run `npm start > output.csv` to put the results to a file. Hit `control-C` to stop it.
 
 # Install on Mac
 
@@ -36,6 +42,7 @@
 2. Allow bluetooth access on the terminal app: "System Preferences" —> "Security & Privacy" —> "Bluetooth" -> Add terminal app
 3. Clone the repo `git clone https://github.com/itchy-o/bluetooth_experiment.git`. Try authenticating with your username and password. If that doesn't work, you'll need to go to the settings page in your github account and set up an SSH key.
 4. Use [nvm](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/) to install node, `nvm install latest`.
+5. In the bt-scanner-client folder create a file called `.env` and copy the contents of the `.env-sample` file.
 5. Install the depenedencies and run the scanner with these commands.
 ```
 cd bluetooth_experiment/src/bt-scanner-client

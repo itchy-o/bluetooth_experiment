@@ -9,6 +9,7 @@
   "author": "Bishop Zareh (http://bishopz.com/)",
   "license": "All rights reserved, Itchy-o LLC",
   "dependencies": {
-    "@abandonware/noble": "1.9.2-21"
+    "@abandonware/noble": "1.9.2-21",
+    "dotenv": "16.3.1"
   }
 }
