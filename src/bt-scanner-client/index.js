@@ -18,8 +18,18 @@ const toTimeString = (date) => {
 }
 
 noble.on('discover', async (peripheral) => {
-  // console.log(peripheral.advertisement)
-  console.log(
-    `${peripheral.uuid},${peripheral.rssi},${toTimeString(new Date())}`
-  )
+  // console.log(peripheral.advertisement.localName)
+
+  if (
+    peripheral.uuid === 'ee205aea6ae6063b179b455255982909'
+    || peripheral.uuid === '77907a1baad1'
+  ) {
+    const address = peripheral.address && peripheral.address !== ''
+      ? peripheral.address : peripheral.uuid
+    console.log(
+      `${address},${peripheral.rssi},${toTimeString(new Date())}`
+    )
+  }
+
+
 });
