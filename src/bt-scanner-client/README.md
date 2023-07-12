@@ -1,6 +1,7 @@
 
 # Next steps
 
++ Get scanner client working on a pi
 + Divide into client & server projects.
 + Filter data to known devices, before it goes over the pipe. Use peripheral.address instead of uuid.
 + Use ENV to create a scanner ID.
@@ -12,16 +13,22 @@
 
 # Install on Raspian (incomplete)
 
-1. Requires a Kernel version 3.6 or above.
-1. libbluetooth-dev needs to be installed...
-  1. `sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev`
-
-...
-
-1. To set the necessary privileges to run without sudo... This is required for all distributions (Raspbian, Ubuntu, Fedora, etc). You will not get any errors if running without sudo, but nothing will happen.
-  1. `sudo apt-get install libcap2-bin`
-  2. `sudo setcap cap_net_raw+eip $(eval readlink -f \`which node\`)`
-
+1. Starting with Raspian v11.
+2. libbluetooth-dev needs to be installed...
+   1. `sudo apt-get update`
+   2. `sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev`
+3. Use nvm to install node.js.
+   1. `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`
+   2. `nvm install v12.22.12`
+4. As explained in [this bug report](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=690749) we must disable the pnat plugin. Run `sudo nano /etc/bluetooth/main.conf` and add this line to the bottom, `DisablePlugins=pnat`.
+5. Restart the machine.
+6. Configure setcap by running.
+   1. `sudo apt-get install libcap2-bin`
+   2. `sudo setcap cap_net_raw+eip $(eval readlink -f \`which node\`)`
+7. Change to the bt-client folder and install dependencies.
+   1. `cd bluetooth_experiment/src/bt-scanner-client`
+   2. `npm install`
+8. Run `npm start` to start the scanner. Or run `npm start > output.csv` to put the results to a file.
 
 # Install on Mac
 
