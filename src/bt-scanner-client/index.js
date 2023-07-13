@@ -2,7 +2,7 @@ const noble = require('@abandonware/noble');
 require('dotenv').config()
 const { io } = require("socket.io-client");
 
-const scannerId = process.env.SCANNER_ID ?? 'TEST';
+const scannerId = process.env.SCANNER_ID || 'TEST';
 const serverAddress = process.env.SERVER_IP + ':' + process.env.PORT
 const toTimeString = (date) => {
   return date.getHours()
@@ -23,8 +23,6 @@ socket.on("connect", () => {
 socket.on("disconnect", () => {
   console.log(socket.id); // undefined
 });
-
-
 
 
 noble.on('stateChange', async (state) => {

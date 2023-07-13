@@ -29,14 +29,13 @@ Currently this repo is setup to look for Bishop's iPhone.
    2. `nvm install v12.22.12`
 4. As explained in [this bug report](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=690749) we must disable the pnat plugin. Run `sudo nano /etc/bluetooth/main.conf` and add this line to the bottom, `DisablePlugins=pnat`.
 5. Restart the machine.
-6. Configure setcap by running.
-   1. `sudo apt-get install libcap2-bin`
-   2. `sudo setcap cap_net_raw+eip $(eval readlink -f \`which node\`)`
+6. Install setcap by running `sudo apt-get install libcap2-bin`.
 7. Change to the bt-client folder and install dependencies.
    1. `cd bluetooth_experiment/src/bt-scanner-client`
    2. `npm install`
-7. In the bt-scanner-client folder create a file called `.env` and copy the contents of the `.env-sample` file.
-8. Run `npm start` to start the scanner. Or run `npm start > output.csv` to put the results to a file. Hit `control-C` to stop it.
+8. In the bt-scanner-client folder create a file called `.env` and copy the contents of the `.env-sample` file.
+9. The first time you run it after a reboot, start by running `npm run sudo`.
+10. Run `npm start` to start the scanner. Or run `npm start > output.csv` to put the results to a file. Hit `control-C` to stop it.
 
 ## Install on Mac
 
