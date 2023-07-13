@@ -1,21 +1,7 @@
 
-
-# BT Scanner Client
-
-## Next steps
-
-+ Divide into client & server projects.
-+ Use socket.io to send data.
-+ Build basic application framework & admin UI for the server.
-+ Some mechanism to accept and que sensor data.
-+ Start doing the translateralization math.
+# BT Scanner Server
 
 
-## Device filtering
-
-On Mac, the BT address is masked. Both Linux and Mac also generate a unique id for each device. Those ids are the same each time the device is detected, but each OS has a different way of calculating that id. So, we need both ids if we want to filter the scanner output to specific devices.
-
-Currently this repo is setup to look for Bishop's iPhone.
 
 
 ## Install on Raspian
@@ -52,3 +38,12 @@ npm install
 npm start
 ```
 1. Hit `control-C` to stop it.
+
+
+# Example
+
+The file `example-output.txt` shows what the output should look like.
+
+To send the output to a file use `npm start > filename.txt`.
+
+The file `dpkg.txt` is an output of the files installed on the pi.

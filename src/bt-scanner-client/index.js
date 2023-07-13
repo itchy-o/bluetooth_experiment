@@ -1,13 +1,9 @@
 const noble = require('@abandonware/noble');
 require('dotenv').config()
+const { io } = require("socket.io-client");
 
-noble.on('stateChange', async (state) => {
-  console.log(state)
-  if (state === 'poweredOn') {
-    await noble.startScanningAsync([], true);
-  }
-});
-
+const scannerId = process.env.SCANNER_ID ?? 'TEST';
+const serverAddress = process.env.SERVER_IP + ':' + process.env.PORT
 const toTimeString = (date) => {
   return date.getHours()
   + ':'
@@ -17,6 +13,26 @@ const toTimeString = (date) => {
   + ':'
   + date.getMilliseconds().toString().padStart(3, "0");
 }
+
+const socket = io(serverAddress);
+
+socket.on("connect", () => {
+  console.log(socket.id); // x8WIv7-mJelg7on_ALbx
+});
+
+socket.on("disconnect", () => {
+  console.log(socket.id); // undefined
+});
+
+
+
+
+noble.on('stateChange', async (state) => {
+  console.log(state)
+  if (state === 'poweredOn') {
+    await noble.startScanningAsync([], true);
+  }
+});
 
 noble.on('discover', async (peripheral) => {
   // if (peripheral.advertisement.localName)
@@ -29,9 +45,9 @@ noble.on('discover', async (peripheral) => {
     const address = peripheral.address && peripheral.address !== ''
       ? peripheral.address
       : peripheral.uuid;
-    console.log(
-      `${process.env.SCANNER_ID ?? 'TEST'},${address},${peripheral.rssi},${toTimeString(new Date())}`
-    )
+    // console.log(
+    //   `${scannerId},${address},${peripheral.rssi},${toTimeString(new Date())}`
+    // )
   }
-
 });
+

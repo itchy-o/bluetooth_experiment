@@ -1,7 +1,7 @@
 {
-  "name": "bt-scanner-client",
+  "name": "bt-scanner-server",
   "version": "0.0.1",
-  "description": "scans for bluetooth and reports it's findings.",
+  "description": "receives data from scanner clients.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -9,8 +9,7 @@
   "author": "Bishop Zareh (http://bishopz.com/)",
   "license": "All rights reserved, Itchy-o LLC",
   "dependencies": {
-    "@abandonware/noble": "1.9.2-21",
     "dotenv": "16.3.1",
-    "socket.io-client": "4.7.1"
+    "socket.io": "4.7.1"
   }
 }
