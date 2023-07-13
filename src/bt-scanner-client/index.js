@@ -15,6 +15,7 @@ const toTimeString = (date) => {
 }
 
 const socket = io(serverAddress);
+console.log('connecting to ' + serverAddress)
 
 socket.on("connect", () => {
   console.log(socket.id); // x8WIv7-mJelg7on_ALbx
@@ -43,9 +44,9 @@ noble.on('discover', async (peripheral) => {
     const address = peripheral.address && peripheral.address !== ''
       ? peripheral.address
       : peripheral.uuid;
-    // console.log(
-    //   `${scannerId},${address},${peripheral.rssi},${toTimeString(new Date())}`
-    // )
+    const row = `${scannerId},${address},${peripheral.rssi},${toTimeString(new Date())}`
+    console.log(row)
+    socket.emit('detection', row)
   }
 });
 
