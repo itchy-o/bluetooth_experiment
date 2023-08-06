@@ -29,13 +29,19 @@ socket.on("disconnect", () => {
 noble.on('stateChange', async (state) => {
   console.log(state)
   if (state === 'poweredOn') {
-    await noble.startScanningAsync([], true);
+    await noble.startScanningAsync([], false);
+  } else {
+    await noble.stopScanningAsync()
   }
 });
 
 noble.on('discover', async (peripheral) => {
   // if (peripheral.advertisement.localName)
-    console.log(peripheral.address, peripheral.uuid, peripheral.advertisement.localName)
+    console.log(
+      peripheral.address,
+      peripheral.uuid,
+      JSON.stringify(peripheral.advertisement)
+    )
 
   if (
     peripheral.uuid === 'ee205aea6ae6063b179b455255982909' // mac
@@ -45,7 +51,7 @@ noble.on('discover', async (peripheral) => {
       ? peripheral.address
       : peripheral.uuid;
     const row = `${scannerId},${address},${peripheral.rssi},${toTimeString(new Date())}`
-    console.log(row)
+    // console.log(row)
     socket.emit('detection', row)
   }
 });

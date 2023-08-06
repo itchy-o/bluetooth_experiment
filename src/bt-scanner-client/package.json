@@ -4,7 +4,7 @@
   "description": "scans for bluetooth and reports it's findings.",
   "main": "index.js",
   "scripts": {
-    "start": "sudo NOBLE_REPORT_ALL_HCI_EVENTS=1 node index.js",
+    "start": "node index.js",
     "sudo": "sudo setcap cap_net_raw+eip $(eval readlink -f `which node`)"
   },
   "author": "Bishop Zareh (http://bishopz.com/)",
